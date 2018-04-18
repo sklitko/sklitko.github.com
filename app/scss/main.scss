@@ -1,0 +1,145 @@
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+
+html,
+body {
+  overflow-x: inherit !important;
+}
+
+body {
+  color: #ffffff;
+}
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 999;
+  padding: 20px 0;
+  transition: 0.5s;
+}
+
+.logo {
+  margin-top: 10px;
+}
+
+.nav-menu {
+  text-align: right;
+  li {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 22px;
+    vertical-align: top;
+    a {
+      color: #fff;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 70px;
+    }
+  }
+}
+
+.full-screenbg {
+  // background-image: url('../img/bg.jpg');
+  background: linear-gradient(135deg, #ff9800, #573402);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 72vh;
+  position: relative;
+}
+
+.inner {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  top: 85px;
+}
+
+.title {
+  padding-top: 12vh;
+  font-size: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: white;
+}
+
+.subtitle {
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+.iphone {
+  // max-height: 510px;
+  height: 60vh;
+  transform: rotate(-5deg);
+  float: right;
+}
+
+.app-btn {
+  text-align: center;
+  ul li {
+    display: block;
+  }
+}
+
+.description {
+  height: 25vh;
+  padding-top: 50px;
+}
+
+.social {
+  text-align: center;
+  // padding-top: 35px;
+}
+
+.social-list__item {
+  display: inline-block;
+}
+.social-list {
+  display: inline-block;
+  // font-size: 35px;
+  padding: 0;
+}
+
+.social-list__item__link {
+  height: 45px;
+  width: 45px;
+  display: block;
+  text-align: center;
+
+  font-size: 26px;
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  transition: 0.3s;
+  i {
+    margin-top: 10px;
+  }
+  &:hover {
+    color: white;
+    background: #ff9800;
+  }
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.ipad {
+  margin-top: 12vh;
+}
+
+.text {
+  color: #ff9800;
+  font-size: 16px;
+}
+
+@import 'media'; // Always at the end
