@@ -73,10 +73,11 @@ header {
   color: white;
 }
 .iphone {
-  // max-height: 510px;
   height: 60vh;
-  transform: rotate(-5deg);
-  float: right;
+  transform: rotateZ(-5deg);
+  display: block;
+  margin: 0 auto;
+  // transform: rotateY(5deg);
 }
 
 .app-btn {
@@ -120,6 +121,12 @@ header {
   position: relative;
   transition: all 0.3s ease;
   transition: 0.3s;
+
+  color: #505050;
+  transition: all 0.3s ease 0s;
+  text-decoration: none !important;
+  outline: none !important;
+  font-weight: 400;
   i {
     margin-top: 10px;
   }
@@ -135,11 +142,16 @@ header {
 
 .ipad {
   margin-top: 12vh;
+  height: 28vh;
 }
 
 .text {
   color: #ff9800;
   font-size: 16px;
+}
+
+.skew-overlay-right:after {
+  background: #573402 !important;
 }
 
 @import 'media'; // Always at the end
