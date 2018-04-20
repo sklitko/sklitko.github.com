@@ -154,4 +154,11 @@ header {
   background: #573402 !important;
 }
 
+.google-store-section {
+  background-image: url('../img/google-store.jpg');
+}
+
+.contact-section .footer-bottom.footer-bottom2 {
+  padding-top: 0;
+}
 @import 'media'; // Always at the end
