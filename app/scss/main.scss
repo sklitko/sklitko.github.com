@@ -9,6 +9,7 @@ body {
 
 body {
   color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
 }
 header {
   position: absolute;
@@ -24,6 +25,9 @@ header {
 
 .logo {
   margin-top: 10px;
+  img {
+    height: 55px;
+  }
 }
 
 .nav-menu {
@@ -44,19 +48,21 @@ header {
 }
 
 .full-screenbg {
-  // background-image: url('../img/bg.jpg');
-  background: linear-gradient(135deg, #ff9800, #573402);
+  background-image: url('../img/coffee-texture-pattern-food-produce-crop-698630-pxhere.com.jpg');
+  // background: linear-gradient(135deg, #ff9800, #573402);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 72vh;
+  background-position-y: bottom;
+  // min-height: 72vh;
   position: relative;
 }
 
 .inner {
-  position: absolute;
+  position: relative;
   overflow: hidden;
+  padding-bottom: 130px;
   width: 100%;
-  top: 85px;
+  top: 100px;
 }
 
 .title {
