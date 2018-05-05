@@ -74,4 +74,13 @@
 
 // ≤1200px
 @include media-breakpoint-up(xl) {
+  // .iphone {
+  //   height: 750px;
+  // }
+}
+
+@media only screen and (min-width: 1500px) {
+  .iphone {
+    height: 750px;
+  }
 }
