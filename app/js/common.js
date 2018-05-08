@@ -114,3 +114,13 @@ $(function() {
     })
   }
 })
+
+$(function() {
+  $('.language').click(function() {
+    $('.language__list').slideToggle()
+  })
+
+  $('.language__item').click(function() {
+    console.log($(this))
+  })
+})
