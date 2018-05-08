@@ -1,5 +1,116 @@
 $(function() {
+  /*-------------------------------------
+    OwlCarousel
+    -------------------------------------*/
+  $('.rs-carousel').each(function() {
+    var owlCarousel = $(this),
+      loop = owlCarousel.data('loop'),
+      items = owlCarousel.data('items'),
+      margin = owlCarousel.data('margin'),
+      stagePadding = owlCarousel.data('stage-padding'),
+      autoplay = owlCarousel.data('autoplay'),
+      autoplayTimeout = owlCarousel.data('autoplay-timeout'),
+      smartSpeed = owlCarousel.data('smart-speed'),
+      dots = owlCarousel.data('dots'),
+      nav = owlCarousel.data('nav'),
+      navSpeed = owlCarousel.data('nav-speed'),
+      xsDevice = owlCarousel.data('mobile-device'),
+      xsDeviceNav = owlCarousel.data('mobile-device-nav'),
+      xsDeviceDots = owlCarousel.data('mobile-device-dots'),
+      smDevice = owlCarousel.data('ipad-device'),
+      smDeviceNav = owlCarousel.data('ipad-device-nav'),
+      smDeviceDots = owlCarousel.data('ipad-device-dots'),
+      mdDevice = owlCarousel.data('md-device'),
+      mdDeviceNav = owlCarousel.data('md-device-nav'),
+      mdDeviceDots = owlCarousel.data('md-device-dots')
+    owlCarousel.owlCarousel({
+      loop: loop ? true : false,
+      items: items ? items : 4,
+      lazyLoad: true,
+      margin: margin ? margin : 0,
+      //stagePadding: (stagePadding ? stagePadding : 0),
+      autoplay: autoplay ? true : false,
+      autoplayTimeout: autoplayTimeout ? autoplayTimeout : 1000,
+      smartSpeed: smartSpeed ? smartSpeed : 250,
+      dots: dots ? true : false,
+      nav: nav ? true : false,
+      navText: [
+        "<i class='fa fa-angle-left'></i>",
+        "<i class='fa fa-angle-right'></i>"
+      ],
+      navSpeed: navSpeed ? true : false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: xsDevice ? xsDevice : 1,
+          nav: xsDeviceNav ? true : false,
+          dots: xsDeviceDots ? true : false
+        },
+        768: {
+          items: smDevice ? smDevice : 3,
+          nav: smDeviceNav ? true : false,
+          dots: smDeviceDots ? true : false
+        },
+        992: {
+          items: mdDevice ? mdDevice : 4,
+          nav: mdDeviceNav ? true : false,
+          dots: mdDeviceDots ? true : false
+        }
+      }
+    })
+  })
+})
 
-	// Custom JS
+$(function() {
+  // magnificPopup init
+  var popupquote = $('.popup-quote')
+  if (popupquote.length) {
+    $('.popup-quote').magnificPopup({
+      type: 'image',
+      callbacks: {
+        beforeOpen: function() {
+          this.st.image.markup = this.st.image.markup.replace(
+            'mfp-figure',
+            'mfp-figure animated zoomInDown'
+          )
+        }
+      },
+      gallery: {
+        enabled: true
+      }
+    })
+  }
 
-});
+  if ($('.arrow-btn a').length) {
+    $('.arrow-btn a').on(' click ', function() {
+      $('html, body').animate(
+        {
+          scrollTop: $('#about-section').offset().top
+        },
+        1000
+      )
+    })
+  }
+
+  // video popup
+  var popupyoutube = $('.popup-youtube')
+  if (popupyoutube.length) {
+    $('.popup-youtube').magnificPopup({
+      disableOn: 700,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
+    })
+  }
+
+  // Counter Up
+  var rscounter = $('.rs-counter')
+  if (rscounter.length) {
+    $('.rs-counter').counterUp({
+      delay: 20,
+      time: 1500
+    })
+  }
+})

@@ -169,4 +169,12 @@ header {
 .contact-section .footer-bottom.footer-bottom2 {
   padding-top: 0;
 }
+
+.rs-count {
+  width: 100%;
+  & div {
+    float: left;
+  }
+}
+
 @import 'media'; // Always at the end
