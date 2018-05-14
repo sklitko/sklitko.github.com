@@ -115,12 +115,12 @@ $(function() {
   }
 })
 
-$(function() {
-  $('.language').click(function() {
-    $('.language__list').slideToggle()
-  })
+// $(function() {
+//   $('.language').click(function() {
+//     $('.language__list').slideToggle()
+//   })
 
-  $('.language__item').click(function() {
-    console.log($(this))
-  })
-})
+//   $('.language__item').click(function() {
+//     console.log($(this))
+//   })
+// })
