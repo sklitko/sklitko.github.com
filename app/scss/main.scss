@@ -51,11 +51,11 @@ header {
   // background-image: url('../img/coffee-texture-pattern-food-produce-crop-698630-pxhere.com.jpg');
   // background-image: url('../img/index-header-bg.jpg');
   // background-image: url('../img/bg-top-container.jpg');
-  background-image: url('../img/slide-2.jpg');
+  background-image: url('../img/slide-1.jpg');
   // background: linear-gradient(135deg, #ff9800, #573402);
   background-repeat: no-repeat;
   background-size: cover;
-  // background-position-y: bottom;
+  background-position-y: bottom;
   // min-height: 72vh;
   position: relative;
 }
@@ -207,17 +207,17 @@ header {
   background-image: url('../img/flags/1000px-Flag_of_Germany.svg.png');
 }
 
-.features-app-section {
-  background-image: url('../img/slide-1.jpg') !important;
-  background-repeat: no-repeat;
-  // background: url('../img/slide-1.jpg') !important;
-  background-attachment: relative;
-}
+// .features-app-section {
+//   background-image: url('../img/slide-1.jpg') !important;
+//   background-repeat: no-repeat;
+//   // background: url('../img/slide-1.jpg') !important;
+//   background-attachment: relative;
+// }
 
-.skew-overlay-down {
-  &::before,
-  &::after {
-    opacity: 0.5;
-  }
-}
+// .skew-overlay-down {
+//   &::before,
+//   &::after {
+//     opacity: 0.5;
+//   }
+// }
 @import 'media'; // Always at the end
