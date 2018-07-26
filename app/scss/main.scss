@@ -36,7 +36,7 @@ header {
     display: inline-block;
     font-size: 14px;
     margin-left: 22px;
-    vertical-align: top;
+    // vertical-align: top;
     a {
       color: #fff;
       font-size: 15px;
@@ -48,52 +48,51 @@ header {
 }
 
 .full-screenbg {
-  // background-image: url('../img/coffee-texture-pattern-food-produce-crop-698630-pxhere.com.jpg');
-  // background-image: url('../img/index-header-bg.jpg');
-  // background-image: url('../img/bg-top-container.jpg');
-  background-image: url('../img/slide-1.jpg');
-  // background: linear-gradient(135deg, #ff9800, #573402);
+  background-image: url('../img/kawa/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: bottom;
-  // min-height: 72vh;
+  background-position: center;
+  height: 125vh;
+  margin-top: -25vh;
   position: relative;
+  z-index: 1;
 }
 
 .inner {
   position: relative;
   overflow: hidden;
-  padding-bottom: 130px;
+  // padding-bottom: 24vh;
   width: 100%;
-  top: 100px;
+  top: calc(25vh + 100px);
 }
 
 .title {
-  padding-top: 12vh;
-  font-size: 70px;
-  line-height: 70px;
-  text-align: center;
+  padding-top: 10vh;
+  font-size: 50px;
+  line-height: 60px;
   color: white;
+}
+
+.full-screenbg {
+  .text {
+    font-size: 24px;
+    color: white;
+  }
 }
 
 .subtitle {
-  font-size: 25px;
-  text-align: center;
+  font-size: 40px;
   color: white;
 }
 .iphone {
-  height: 550px;
-  transform: rotateZ(-5deg);
+  height: 75vh;
   display: block;
   margin: 0 auto;
-  // transform: rotateY(5deg);
 }
 
 .app-btn {
-  text-align: center;
-  ul li {
-    display: block;
-  }
+  display: flex;
+  justify-content: space-between;
 }
 
 .description {
@@ -145,6 +144,10 @@ header {
   }
 }
 
+.navbar {
+  justify-content: flex-end;
+}
+
 .navbar-toggler {
   border-color: white;
 }
@@ -163,10 +166,6 @@ header {
   background: #573402 !important;
 }
 
-.google-store-section {
-  background-image: url('../img/google-store.jpg');
-}
-
 .contact-section .footer-bottom.footer-bottom2 {
   padding-top: 0;
 }
@@ -177,14 +176,50 @@ header {
     float: left;
   }
 }
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  a {
+    font-weight: bold;
+    color: white;
+    &:hover {
+      color: #ea9308;
+    }
+  }
+  & > li {
+    padding: 20px 0px 20px 20px;
+  }
+}
 .language {
   position: relative;
-  padding: 20px 0 20px 0;
+  padding-left: 100px !important;
   &__list {
+    display: flex;
   }
   &__item {
     margin-left: 0 !important;
     margin-right: 20px;
+
+    a {
+      border: 1px solid white;
+      border-radius: 50%;
+      padding: 2px;
+      display: inline-block;
+      & > span {
+        padding: 5px;
+        display: inline-block;
+        border: 1px solid white;
+        border-radius: 50%;
+      }
+      &:hover {
+        background: $main;
+        color: white !important;
+      }
+    }
   }
 }
 
@@ -207,17 +242,154 @@ header {
   background-image: url('../img/flags/1000px-Flag_of_Germany.svg.png');
 }
 
-// .features-app-section {
-//   background-image: url('../img/slide-1.jpg') !important;
-//   background-repeat: no-repeat;
-//   // background: url('../img/slide-1.jpg') !important;
-//   background-attachment: relative;
-// }
+.features-app-section {
+  background-image: url('../img/kawa/coffe1.png') !important;
+  background-repeat: no-repeat;
+  margin-top: -10vh;
+  // background-attachment: relative;
+}
 
-// .skew-overlay-down {
-//   &::before,
-//   &::after {
-//     opacity: 0.5;
-//   }
-// }
+.overlay {
+  background: #ea9308;
+  opacity: 0.95;
+}
+
+.features-icon {
+  right: 10px;
+  img {
+    height: 65px;
+  }
+}
+
+.feture-mid-images {
+  img {
+    height: 57vh;
+  }
+}
+
+.faq-section {
+  background-image: url('../img/kawa/bg2.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  margin-top: -10vh;
+}
+
+.heading-section-center .title-heading {
+  color: black;
+  &:before {
+    background: black !important;
+  }
+}
+
+.faq-section .panel {
+  border: none;
+}
+
+.faq-section .panel .panel-heading h4.panel-title a {
+  background: $main;
+  border-radius: 10px;
+}
+
+.gallery-section {
+  background-image: url('../img/kawa/bg3.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  margin-top: -10vh;
+}
+
+.google-store-section {
+  background-image: url(../img/kawa/coffe1.png) !important;
+  background-repeat: no-repeat;
+  margin-top: -10vh;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sec-spacer {
+  padding: 200px 0;
+}
+
+.contact-section2 {
+  background-image: url('../img/kawa/bg4.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  margin-top: -10vh;
+  color: black;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-bottom: 35px;
+
+  &__thumb {
+    margin-bottom: 30px;
+  }
+  &__btn {
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 10px 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.35);
+    &--viber {
+      color: #7c519b;
+    }
+
+    &--messenger {
+      color: #0084ff;
+    }
+
+    &--telegram {
+      color: #2da5e1;
+    }
+    &:hover {
+      color: $main;
+    }
+  }
+}
+
+.contact-text {
+  font-size: 22px;
+  letter-spacing: 1px;
+  padding: 40px 0;
+}
+
+.contact-phone {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    font-size: 22px;
+    img {
+      margin-right: 20px;
+    }
+  }
+}
+
+.title-heading {
+  font-size: 60px !important;
+  line-height: 60px !important;
+  &::before {
+    width: 290px !important;
+  }
+}
+
+.sub-title {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
 @import 'media'; // Always at the end
