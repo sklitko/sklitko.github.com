@@ -4,12 +4,13 @@
 
 html,
 body {
-  overflow-x: inherit !important;
+  // overflow-x: inherit !important;
 }
 
 body {
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
 }
 header {
   position: absolute;
@@ -26,7 +27,7 @@ header {
 .logo {
   margin-top: 10px;
   img {
-    height: 55px;
+    height: 65px;
   }
 }
 
@@ -36,7 +37,6 @@ header {
     display: inline-block;
     font-size: 14px;
     margin-left: 22px;
-    // vertical-align: top;
     a {
       color: #fff;
       font-size: 15px;
@@ -48,6 +48,7 @@ header {
 }
 
 .full-screenbg {
+  font-weight: normal;
   background-image: url('../img/kawa/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,6 +57,34 @@ header {
   margin-top: -25vh;
   position: relative;
   z-index: 1;
+  .social-icons {
+    position: absolute;
+    bottom: 0;
+  }
+  .title {
+    font-weight: 600;
+    @include media-breakpoint-down(sm) {
+      padding-top: 5px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+  }
+
+  .subtitle {
+    font-weight: 100;
+    @include media-breakpoint-down(xs) {
+      font-size: 18px;
+    }
+  }
+  .text {
+    font-weight: 100;
+    font-size: 28px;
+    color: white;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  }
 }
 
 .inner {
@@ -63,7 +92,10 @@ header {
   overflow: hidden;
   // padding-bottom: 24vh;
   width: 100%;
-  top: calc(25vh + 100px);
+  top: calc(25vh + 150px);
+  @include media-breakpoint-down(md) {
+    top: calc(25vh + 150px);
+  }
 }
 
 .title {
@@ -73,21 +105,23 @@ header {
   color: white;
 }
 
-.full-screenbg {
-  .text {
-    font-size: 24px;
-    color: white;
-  }
-}
-
 .subtitle {
-  font-size: 40px;
+  font-size: 48px;
   color: white;
 }
 .iphone {
   height: 75vh;
   display: block;
-  margin: 0 auto;
+  @include media-breakpoint-down(lg) {
+    height: 70vh;
+  }
+  @include media-breakpoint-down(md) {
+    height: 65vh;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 55vh;
+  }
+  // margin: 0 auto;
 }
 
 .app-btn {
@@ -98,50 +132,6 @@ header {
 .description {
   height: 25vh;
   padding-top: 50px;
-}
-
-.social {
-  text-align: center;
-  // padding-top: 35px;
-}
-
-.social-list__item {
-  display: inline-block;
-}
-.social-list {
-  display: inline-block;
-  // font-size: 35px;
-  padding: 0;
-}
-
-.social-list__item__link {
-  height: 45px;
-  width: 45px;
-  display: block;
-  text-align: center;
-
-  font-size: 26px;
-  border-radius: 50%;
-  border: none;
-  margin: 0;
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  transition: all 0.3s ease;
-  transition: 0.3s;
-
-  color: #505050;
-  transition: all 0.3s ease 0s;
-  text-decoration: none !important;
-  outline: none !important;
-  font-weight: 400;
-  i {
-    margin-top: 10px;
-  }
-  &:hover {
-    color: white;
-    background: #ff9800;
-  }
 }
 
 .navbar {
@@ -180,7 +170,7 @@ header {
 .main-menu {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 22px;
   text-transform: uppercase;
 
   a {
@@ -223,25 +213,6 @@ header {
   }
 }
 
-.flag {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.ukr {
-  background-image: url('../img/flags/1200px-Flag_of_Ukraine.svg.png');
-}
-
-.us {
-  background-image: url('../img/flags/1235px-Flag_of_the_United_States_\(Pantone\).svg.png');
-}
-.de {
-  background-image: url('../img/flags/1000px-Flag_of_Germany.svg.png');
-}
-
 .features-app-section {
   background-image: url('../img/kawa/coffe1.png') !important;
   background-repeat: no-repeat;
@@ -257,7 +228,7 @@ header {
 .features-icon {
   right: 10px;
   img {
-    height: 65px;
+    height: 85px;
   }
 }
 
@@ -275,13 +246,6 @@ header {
   position: relative;
   z-index: 1;
   margin-top: -10vh;
-}
-
-.heading-section-center .title-heading {
-  color: black;
-  &:before {
-    background: black !important;
-  }
 }
 
 .faq-section .panel {
@@ -313,7 +277,7 @@ header {
 }
 
 .sec-spacer {
-  padding: 200px 0;
+  padding: 220px 0;
 }
 
 .contact-section2 {
@@ -361,7 +325,7 @@ header {
 }
 
 .contact-text {
-  font-size: 22px;
+  font-size: 30px;
   letter-spacing: 1px;
   padding: 40px 0;
 }
@@ -372,14 +336,17 @@ header {
     justify-content: space-between;
   }
   &__item {
-    font-size: 22px;
+    font-size: 30px;
     img {
       margin-right: 20px;
     }
   }
 }
 
-.title-heading {
+.heading-section-center .subtitle-heading {
+  font-size: 30px;
+}
+.heading-section-center .title-heading {
   font-size: 60px !important;
   line-height: 60px !important;
   &::before {
@@ -388,8 +355,19 @@ header {
 }
 
 .sub-title {
-  font-size: 22px;
+  font-size: 30px;
   letter-spacing: 1px;
 }
 
+.content-container {
+  @include make-container();
+  max-width: 1400px;
+}
+
+.features-service {
+  font-size: 24px;
+  h3 {
+    font-size: 32px;
+  }
+}
 @import 'media'; // Always at the end

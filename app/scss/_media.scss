@@ -12,42 +12,40 @@
 
 // ≥768px
 @include media-breakpoint-down(sm) {
-  .inner {
-    top: 100px;
-  }
+  // .inner {
+  //   top: 100px;
+  // }
 
   .sec-spacer {
-    padding: 0 0;
+    // padding: 100px 0;
   }
 }
 
 // ≥576px
 @include media-breakpoint-down(xs) {
-  .iphone {
-    height: 385px;
-  }
-  .title {
-    padding-top: 5px;
-    font-size: 40px;
-    line-height: 75px;
-  }
+  // .iphone {
+  //   height: 385px;
+  // }
+  // .title {
+  //   padding-top: 5px;
+  //   font-size: 40px;
+  //   line-height: 75px;
+  // }
 
-  .subtitle {
-    font-size: 18px;
-  }
+  // .subtitle {
+  //   font-size: 18px;
+  // }
 
-  .full-screenbg {
-  }
-  .description {
-    padding-top: 10px;
-    min-height: 50vh;
-  }
+  // .description {
+  //   padding-top: 10px;
+  //   min-height: 50vh;
+  // }
 }
 
 @media only screen and (max-width: 350px) {
-  .iphone {
-    height: 310px;
-  }
+  // .iphone {
+  //   height: 310px;
+  // }
   .subtitle {
     font-size: 17px;
     line-height: 2;
@@ -80,7 +78,7 @@
 }
 
 @media only screen and (min-width: 1500px) {
-  .iphone {
-    height: 750px;
-  }
+  // .iphone {
+  //   height: 750px;
+  // }
 }

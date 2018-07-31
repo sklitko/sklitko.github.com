@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 /**
 *
 * -----------------------------------------------------------------------------
@@ -46,7 +45,6 @@ html,
 body {
   font-size: 14px;
   color: #505050;
-  font-family: 'Montserrat', sans-serif;
   vertical-align: baseline;
   line-height: 26px;
   font-weight: 400;
@@ -207,7 +205,7 @@ ul {
   color: #505050;
 }
 .heading-section-center .title-heading {
-  color: #ff9800;
+  color: black;
   font-size: 36px;
   font-weight: 400;
   line-height: 34px;
@@ -225,11 +223,7 @@ ul {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  background: #ff9800;
-  background: -moz-linear-gradient(-135deg, #ff9800, #573402);
-  background: -webkit-linear-gradient(-135deg, #ff9800, #573402);
-  background: -ms-linear-gradient(-135deg, #ff9800, #573402);
-  background: linear-gradient(-135deg, #ff9800, #573402);
+  background: black;
 }
 .heading-section-center .subtitle-heading {
   font-size: 16px;
@@ -1814,7 +1808,7 @@ nav.right_menu_togle {
   padding-left: 10px;
 }
 .features-app-section.features-app-section2 .features-service .features-content h3 {
-  font-size: 20px;
+  font-size: 32px;
   line-height: 20px;
   color: #ffffff;
   font-weight: 400;
@@ -1826,10 +1820,10 @@ nav.right_menu_togle {
 }
 .features-app-section.features-app-section2 .features-service .features-icon {
   position: absolute;
-  right: 20px;
-  margin-left: 10px;
+  right: 0;
+  margin-left: -15px;
   z-index: 11;
-  top: 30px;
+  top: 25px;
 }
 .features-app-section.features-app-section2 .features-service .features-icon i {
   font-size: 26px;
