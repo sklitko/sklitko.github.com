@@ -2,15 +2,11 @@
 @import 'fonts';
 @import 'libs';
 
-html,
-body {
-  // overflow-x: inherit !important;
-}
-
 body {
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
+  font-size: 18px;
+  font-weight: 100;
 }
 header {
   position: absolute;
@@ -63,6 +59,10 @@ header {
   }
   .title {
     font-weight: 600;
+    padding-top: 10vh;
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
     @include media-breakpoint-down(sm) {
       padding-top: 5px;
       font-size: 30px;
@@ -73,13 +73,14 @@ header {
 
   .subtitle {
     font-weight: 100;
+    font-size: 40px;
     @include media-breakpoint-down(xs) {
       font-size: 18px;
     }
   }
   .text {
     font-weight: 100;
-    font-size: 28px;
+    font-size: 24px;
     color: white;
     @include media-breakpoint-down(sm) {
       font-size: 14px;
@@ -92,26 +93,16 @@ header {
   overflow: hidden;
   // padding-bottom: 24vh;
   width: 100%;
-  top: calc(25vh + 150px);
+  top: calc(25vh + 125px);
   @include media-breakpoint-down(md) {
-    top: calc(25vh + 150px);
+    top: calc(25vh + 125px);
   }
 }
 
-.title {
-  padding-top: 10vh;
-  font-size: 50px;
-  line-height: 60px;
-  color: white;
-}
-
-.subtitle {
-  font-size: 48px;
-  color: white;
-}
 .iphone {
   height: 75vh;
   display: block;
+  float: right;
   @include media-breakpoint-down(lg) {
     height: 70vh;
   }
@@ -170,7 +161,7 @@ header {
 .main-menu {
   display: flex;
   align-items: center;
-  font-size: 22px;
+  font-size: 18px;
   text-transform: uppercase;
 
   a {
@@ -191,8 +182,10 @@ header {
     display: flex;
   }
   &__item {
-    margin-left: 0 !important;
-    margin-right: 20px;
+    &:not(:last-child) {
+      margin-left: 0 !important;
+      margin-right: 20px;
+    }
 
     a {
       border: 1px solid white;
@@ -277,7 +270,7 @@ header {
 }
 
 .sec-spacer {
-  padding: 220px 0;
+  padding: 150px 0;
 }
 
 .contact-section2 {
@@ -325,7 +318,7 @@ header {
 }
 
 .contact-text {
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: 1px;
   padding: 40px 0;
 }
@@ -336,7 +329,7 @@ header {
     justify-content: space-between;
   }
   &__item {
-    font-size: 30px;
+    font-size: 24px;
     img {
       margin-right: 20px;
     }
@@ -344,18 +337,12 @@ header {
 }
 
 .heading-section-center .subtitle-heading {
-  font-size: 30px;
-}
-.heading-section-center .title-heading {
-  font-size: 60px !important;
-  line-height: 60px !important;
-  &::before {
-    width: 290px !important;
-  }
+  font-size: 22px;
 }
 
 .sub-title {
-  font-size: 30px;
+  font-size: 22px;
+  font-weight: 100;
   letter-spacing: 1px;
 }
 
@@ -365,9 +352,52 @@ header {
 }
 
 .features-service {
-  font-size: 24px;
-  h3 {
-    font-size: 32px;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.gallery-section .single-gallery {
+  border: none;
+}
+.social-icons {
+  ul li a i {
+    border-radius: 50%;
+    &:hover {
+      background: #ff9800;
+    }
+  }
+}
+
+.google-store-section .about-details2 ul.about-list li:before {
+  content: '\e905';
+  color: #f8f8f8;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 30px;
+}
+
+.about-details2 {
+  font-size: 20px;
+}
+
+.about-content {
+  margin-bottom: 3rem;
+}
+
+.about-img {
+  img {
+    height: 70vh;
+  }
+}
+
+.google-store-section .store-images {
+  li:not(:last-child) {
+    margin-right: 50px;
   }
 }
 @import 'media'; // Always at the end
