@@ -77,6 +77,9 @@
   content: '\e90c';
   color: #f8f8f8;
 }
+
+.icon-fb:hover {
+}
 .icon-fb2 .path1:before {
   content: '\e90d';
   color: rgb(248, 248, 248);
@@ -142,8 +145,27 @@
   color: #f8f8f8;
 }
 
-.icon-ru::before:hover {
+.icon-ru:hover {
+  &::before {
+    background-color: rgb(233, 148, 35);
+    border-radius: 50%;
+  }
 }
+
+.icon-ua:hover {
+  &::before {
+    background-color: rgb(233, 148, 35);
+    border-radius: 50%;
+  }
+}
+
+.icon-en:hover {
+  &::before {
+    background-color: rgb(233, 148, 35);
+    border-radius: 50%;
+  }
+}
+
 .icon-ru2 .path1:before {
   content: '\e91c';
   color: rgb(233, 148, 35);
@@ -186,4 +208,40 @@
   content: '\e925';
   margin-left: -1em;
   color: rgb(248, 248, 248);
+}
+
+[class^='icon2-'],
+[class*=' icon2-'] {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 35px;
+  width: 35px;
+}
+.icon2-fb {
+  background-image: url('../img/icons/fb.png');
+  &:hover {
+    background-image: url('../img/icons/fb2.png');
+  }
+}
+
+.icon2-tw {
+  background-image: url('../img/icons/tw.png');
+  &:hover {
+    background-image: url('../img/icons/tw2.png');
+  }
+}
+
+.icon2-g {
+  background-image: url('../img/icons/g+.png');
+  &:hover {
+    background-image: url('../img/icons/g+2.png');
+  }
+}
+
+.icon2-insta {
+  background-image: url('../img/icons/insta.png');
+  &:hover {
+    background-image: url('../img/icons/insta2.png');
+  }
 }

@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'fonts';
+@import 'iconmoon';
 @import 'libs';
 
 body {
@@ -18,6 +19,10 @@ header {
   z-index: 999;
   padding: 20px 0;
   transition: 0.5s;
+}
+
+.sec-spacer {
+  padding: 100px 0;
 }
 
 .logo {
@@ -186,23 +191,6 @@ header {
       margin-left: 0 !important;
       margin-right: 20px;
     }
-
-    a {
-      border: 1px solid white;
-      border-radius: 50%;
-      padding: 2px;
-      display: inline-block;
-      & > span {
-        padding: 5px;
-        display: inline-block;
-        border: 1px solid white;
-        border-radius: 50%;
-      }
-      &:hover {
-        background: $main;
-        color: white !important;
-      }
-    }
   }
 }
 
@@ -258,6 +246,18 @@ header {
   position: relative;
   z-index: 1;
   margin-top: -10vh;
+  padding-bottom: 180px;
+}
+
+.about-section {
+  background-image: url(../img/kawa/coffe1.png) !important;
+  background-repeat: no-repeat;
+  margin-top: -10vh;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
 
 .google-store-section {
@@ -267,10 +267,7 @@ header {
   position: relative;
   background-size: cover;
   background-attachment: fixed;
-}
-
-.sec-spacer {
-  padding: 150px 0;
+  padding: 170px 0;
 }
 
 .contact-section2 {
@@ -326,7 +323,7 @@ header {
 .contact-phone {
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   &__item {
     font-size: 24px;
@@ -359,16 +356,8 @@ header {
 .gallery-section .single-gallery {
   border: none;
 }
-.social-icons {
-  ul li a i {
-    border-radius: 50%;
-    &:hover {
-      background: #ff9800;
-    }
-  }
-}
 
-.google-store-section .about-details2 ul.about-list li:before {
+.about-section .about-details2 ul.about-list li:before {
   content: '\e905';
   color: #f8f8f8;
   font-family: 'icomoon' !important;
@@ -378,7 +367,7 @@ header {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .about-details2 {
@@ -392,6 +381,7 @@ header {
 .about-img {
   img {
     height: 70vh;
+    float: right;
   }
 }
 
@@ -400,4 +390,5 @@ header {
     margin-right: 50px;
   }
 }
+
 @import 'media'; // Always at the end
