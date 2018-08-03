@@ -61,6 +61,24 @@ header {
   .social-icons {
     position: absolute;
     bottom: 0;
+    li {
+      margin-top: 20px;
+    }
+    a {
+      position: relative;
+      &:hover {
+        & > span {
+          display: block;
+        }
+      }
+      & > span {
+        position: absolute;
+        left: 43px;
+        top: -30px;
+        color: #ffffff;
+        display: none;
+      }
+    }
   }
   .title {
     font-weight: 600;
