@@ -245,15 +245,61 @@ header {
   position: relative;
   z-index: 1;
   margin-top: -10vh;
+  &.sec-spacer {
+    padding: 100px 0 50px 0;
+  }
 }
 
 .faq-section .panel {
   border: none;
 }
 
-.faq-section .panel .panel-heading h4.panel-title a {
-  background: $main;
-  border-radius: 10px;
+.faq-section {
+  .panel .panel-heading h4.panel-title a {
+    background: $main;
+    border-radius: 10px;
+  }
+  .card {
+    background-color: transparent;
+    border: none;
+  }
+  .card + .card {
+    margin-top: 18px;
+  }
+  .card-header {
+    background-color: $main;
+    border-radius: 10px;
+    border-bottom: none;
+    padding: 12px 20px;
+    .btn-link {
+      color: white;
+      font-size: 16px;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+      &:hover {
+        text-decoration: none;
+      }
+      &::after {
+        content: '\f054';
+        font-family: 'FontAwesome';
+        color: #ffffff;
+        float: right;
+      }
+    }
+    &.active {
+      .btn-link::after {
+        content: '\f078';
+      }
+    }
+  }
+  .card-body {
+    color: black;
+  }
+
+  .faq-img {
+    margin-top: -50px;
+  }
 }
 
 .gallery-section {
@@ -365,10 +411,15 @@ header {
   @include make-container();
   max-width: 1400px;
 }
-
-.features-service {
-  font-size: 18px;
-  font-weight: 100;
+.features-app-section.features-app-section2 {
+  .features-service {
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 7px;
+    &:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+  }
 }
 
 .gallery-section .single-gallery {
