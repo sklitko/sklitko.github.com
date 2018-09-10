@@ -426,17 +426,29 @@ header {
   border: none;
 }
 
-.about-section .about-details2 ul.about-list li:before {
-  content: '\e905';
-  color: #f8f8f8;
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 40px;
+.about-section {
+  .about-details2 {
+    .about-list {
+      li {
+        padding-left: 55px !important;
+        margin-bottom: 10px;
+        padding-top: 4px;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .about-details2 ul.about-list li:before {
+    content: '\e905';
+    color: #f8f8f8;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 40px;
+  }
 }
 
 .about-details2 {
