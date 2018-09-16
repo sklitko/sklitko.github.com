@@ -62,7 +62,7 @@ header {
     position: absolute;
     bottom: 0;
     li {
-      margin-top: 20px;
+      margin-top: 15px;
     }
     a {
       position: relative;
@@ -86,6 +86,9 @@ header {
     font-size: 50px;
     line-height: 60px;
     color: white;
+    @include media-breakpoint-down(lg) {
+      padding-top: 5vh;
+    }
     @include media-breakpoint-down(sm) {
       padding-top: 5px;
       font-size: 30px;
@@ -127,6 +130,8 @@ header {
   display: block;
   float: right;
   @include media-breakpoint-down(lg) {
+    float: none;
+    margin: 0 auto;
     height: 70vh;
   }
   @include media-breakpoint-down(md) {
@@ -216,25 +221,85 @@ header {
   background-image: url('../img/kawa/coffe1.png') !important;
   background-repeat: no-repeat;
   margin-top: -10vh;
-  // background-attachment: relative;
+  .features-service {
+    &.text-left {
+      .features-content {
+        @include media-breakpoint-down(lg) {
+          padding-left: 75px !important;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 0 !important;
+        }
+      }
+    }
+    &.text-right {
+      .features-content {
+        @include media-breakpoint-down(lg) {
+          padding-right: 75px !important;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 0 !important;
+        }
+      }
+    }
+    .features-content {
+      @include media-breakpoint-down(lg) {
+        p {
+          font-size: 16px !important;
+        }
+        h3 {
+          font-size: 19px !important;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        text-align: center;
+        p {
+          font-size: 16px;
+        }
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 20px 0 15px;
+    }
+  }
+
+  .features-icon {
+    right: 10px;
+    text-align: center;
+
+    img {
+      height: 85px;
+      @include media-breakpoint-down(lg) {
+        height: 60px;
+        display: inline-block;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      position: static !important;
+      padding-bottom: 16px;
+    }
+  }
+
+  .feture-mid-images {
+    img {
+      height: 57vh;
+      @include media-breakpoint-down(lg) {
+        height: auto;
+      }
+      @include media-breakpoint-down(md) {
+        // height: auto;
+        display: none;
+      }
+    }
+  }
 }
 
 .overlay {
   background: #ea9308;
   opacity: 0.95;
-}
-
-.features-icon {
-  right: 10px;
-  img {
-    height: 85px;
-  }
-}
-
-.feture-mid-images {
-  img {
-    height: 57vh;
-  }
 }
 
 .faq-section {
@@ -299,6 +364,14 @@ header {
 
   .faq-img {
     margin-top: -50px;
+    @include media-breakpoint-down(lg) {
+      padding-top: 30px;
+      margin-top: 0;
+      // img {
+      //   display: block;
+      //   margin: 0 auto;
+      // }
+    }
   }
 }
 
@@ -310,7 +383,7 @@ header {
   position: relative;
   z-index: 1;
   margin-top: -10vh;
-  padding-bottom: 180px;
+  padding-bottom: 150px;
 }
 
 .about-section {
@@ -391,20 +464,31 @@ header {
   }
   &__item {
     font-size: 24px;
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+    }
     img {
       margin-right: 20px;
     }
   }
 }
 
-.heading-section-center .subtitle-heading {
-  font-size: 22px;
+.heading-section-center {
+  @include media-breakpoint-down(md) {
+    padding-bottom: 10px;
+  }
+  .subtitle-heading {
+    font-size: 22px;
+  }
 }
 
 .sub-title {
   font-size: 22px;
   font-weight: 100;
   letter-spacing: 1px;
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
 }
 
 .content-container {
@@ -418,6 +502,10 @@ header {
     border-radius: 7px;
     &:hover {
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+    .features-icon {
+      right: 7px;
+      margin-left: -6px;
     }
   }
 }
@@ -461,8 +549,14 @@ header {
 
 .about-img {
   img {
-    height: 70vh;
+    // height: 70vh;
     float: right;
+    @include media-breakpoint-down(lg) {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      height: 70vh;
+    }
   }
 }
 

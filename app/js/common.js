@@ -25,7 +25,7 @@ $(function() {
       mdDeviceDots = owlCarousel.data('md-device-dots')
     owlCarousel.owlCarousel({
       loop: loop ? true : false,
-      items: items ? items : 4,
+      items: items ? items : 5,
       lazyLoad: true,
       margin: margin ? margin : 0,
       //stagePadding: (stagePadding ? stagePadding : 0),
@@ -52,7 +52,7 @@ $(function() {
           dots: smDeviceDots ? true : false
         },
         992: {
-          items: mdDevice ? mdDevice : 4,
+          items: mdDevice ? mdDevice : 5,
           nav: mdDeviceNav ? true : false,
           dots: mdDeviceDots ? true : false
         }
@@ -143,4 +143,10 @@ $(function() {
         .prev('.card-header')
         .removeClass('active')
     })
+})
+
+$(function() {
+  $('.features-service').hover(function() {
+    $('#featureImage').attr('src', $(this).data('img'))
+  })
 })
