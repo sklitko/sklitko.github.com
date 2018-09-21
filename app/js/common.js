@@ -150,3 +150,24 @@ $(function() {
     $('#featureImage').attr('src', $(this).data('img'))
   })
 })
+
+var win = $(window)
+// scrollTop init
+$(function() {
+  var totop = $('#scrollUp')
+  win.on('scroll', function() {
+    if (win.scrollTop() > 150) {
+      totop.fadeIn()
+    } else {
+      totop.fadeOut()
+    }
+  })
+  totop.on('click', function() {
+    $('html,body').animate(
+      {
+        scrollTop: 0
+      },
+      500
+    )
+  })
+})
