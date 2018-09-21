@@ -384,6 +384,11 @@ header {
   z-index: 1;
   margin-top: -10vh;
   padding-bottom: 150px;
+  @media (min-width: 2200px) {
+    // margin-top: -19vh;
+    background-image: url('../img/kawa/bg3_big.png');
+    padding-bottom: 230px;
+  }
 }
 
 .about-section {
@@ -570,6 +575,10 @@ header {
   i {
     background: linear-gradient(135deg, #ff6d00, #ffb74d);
     box-shadow: 0px 12px 26px 0px rgba(0, 0, 0, 0.3);
+    height: 50px;
+    width: 50px;
+    font-size: 35px;
+    line-height: 43px;
   }
 }
 
