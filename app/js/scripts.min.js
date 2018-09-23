@@ -171,3 +171,14 @@ $(function() {
     )
   })
 })
+
+function preloadImages() {
+  for (var i = 0; i < arguments.length; i++)
+    $('<img />').attr('src', arguments[i])
+}
+
+$(function() {
+  $('.features-service').each(function() {
+    preloadImages($(this).data('img'))
+  })
+})

@@ -342,7 +342,8 @@ header {
       width: 100%;
       text-align: left;
       padding: 0;
-      &:hover {
+      &:hover,
+      &:focus {
         text-decoration: none;
       }
       &::after {
