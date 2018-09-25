@@ -146,6 +146,16 @@ header {
 .app-btn {
   display: flex;
   justify-content: space-between;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  &-mobile {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 .description {
@@ -155,6 +165,9 @@ header {
 
 .navbar {
   justify-content: flex-end;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 }
 
 .navbar-toggler {
@@ -336,6 +349,11 @@ header {
     border-radius: 10px;
     border-bottom: none;
     padding: 12px 20px;
+    @include media-breakpoint-down(sm) {
+      border-radius: 7px;
+      padding: 10px 15px;
+      display: inherit;
+    }
     .btn-link {
       color: white;
       font-size: 16px;
@@ -352,6 +370,9 @@ header {
         color: #ffffff;
         float: right;
       }
+      @include media-breakpoint-down(sm) {
+        font-size: 13px;
+      }
     }
     &.active {
       .btn-link::after {
@@ -361,6 +382,9 @@ header {
   }
   .card-body {
     color: black;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
   }
 
   .faq-img {
@@ -427,9 +451,17 @@ header {
 .contact-link {
   display: inline-block;
   margin-bottom: 35px;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 45px;
+  }
 
   &__thumb {
     margin-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+      height: 150px;
+      width: 150px;
+      margin-bottom: 20px;
+    }
   }
   &__btn {
     font-weight: 600;
@@ -460,21 +492,36 @@ header {
 .contact-text {
   font-size: 24px;
   letter-spacing: 1px;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
 }
 
 .contact-phone {
   &__list {
     display: flex;
     justify-content: space-around;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
   }
   &__item {
     font-size: 24px;
+    text-align: center;
     @include media-breakpoint-down(md) {
-      font-size: 18px;
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
     }
     img {
       margin-right: 20px;
+      @include media-breakpoint-down(md) {
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
     }
   }
 }
@@ -482,9 +529,19 @@ header {
 .heading-section-center {
   @include media-breakpoint-down(md) {
     padding-bottom: 10px;
+    width: 100%;
   }
   .subtitle-heading {
     font-size: 22px;
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+  }
+  .title-heading {
+    @include media-breakpoint-down(sm) {
+      font-size: 22px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -493,13 +550,18 @@ header {
   font-weight: 100;
   letter-spacing: 1px;
   @include media-breakpoint-down(md) {
-    font-size: 18px;
+    font-size: 16px;
+    // line-height: 1;
+    letter-spacing: normal;
   }
 }
 
 .content-container {
   @include make-container();
   max-width: 1400px;
+  @media (min-width: 1600px) {
+    max-width: 1600px;
+  }
 }
 .features-app-section.features-app-section2 {
   .features-service {
@@ -522,6 +584,9 @@ header {
 
 .about-section {
   .about-details2 {
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
     .about-list {
       padding-left: 4rem;
       @include media-breakpoint-down(sm) {
@@ -532,6 +597,11 @@ header {
         margin-bottom: 10px;
         padding-top: 4px;
         padding-bottom: 0;
+        @include media-breakpoint-down(sm) {
+          padding-left: 40px;
+          margin-bottom: 3px;
+          padding-top: 3px;
+        }
       }
     }
   }
@@ -546,6 +616,9 @@ header {
     text-transform: none;
     line-height: 1;
     font-size: 40px;
+    @include media-breakpoint-down(sm) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -567,12 +640,19 @@ header {
       margin: 0 auto;
       height: 70vh;
     }
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
   }
 }
 
 .google-store-section .store-images {
   li:not(:last-child) {
     margin-right: 50px;
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 }
 

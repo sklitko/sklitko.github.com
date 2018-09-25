@@ -11,7 +11,8 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   notify = require('gulp-notify'),
   rsync = require('gulp-rsync'),
-  tinypng = require('gulp-tinypng')
+  tinypng = require('gulp-tinypng'),
+  del = require('del')
 
 gulp.task('browser-sync', function() {
   browsersync({
@@ -21,7 +22,7 @@ gulp.task('browser-sync', function() {
     notify: false,
     // open: false,
     tunnel: false,
-    tunnel: 'kawa' //Demonstration page: http://kawa.localtunnel.me
+    // tunnel: 'kawa' //Demonstration page: http://kawa.localtunnel.me
   })
 })
 
@@ -75,7 +76,24 @@ gulp.task('tinypng', function() {
   gulp
     .src('app/**/*.png')
     .pipe(tinypng('wGkSUQdaVFB9IChbbPnVYLLSw8GGOJBU'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist_img'))
 })
 
 gulp.task('default', ['watch'])
+
+gulp.task('build', ['removedist', 'styles', 'js'], function() {
+  var buildFiles = gulp
+    .src(['app/*.html', 'app/.htaccess'])
+    .pipe(gulp.dest('dist'))
+
+  var buildCss = gulp.src(['app/css/*']).pipe(gulp.dest('dist/css'))
+
+  var buildJs = gulp.src(['app/js/scripts.min.js']).pipe(gulp.dest('dist/js'))
+  var buildJsLib = gulp.src(['app/libs/**/*']).pipe(gulp.dest('dist/libs'))
+  var buildImg = gulp.src(['dist_img/**/*']).pipe(gulp.dest('dist'))
+  var buildFonts = gulp.src(['app/fonts/**/*']).pipe(gulp.dest('dist/fonts'))
+})
+
+gulp.task('removedist', function() {
+  return del.sync('dist')
+})
