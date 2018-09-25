@@ -50,7 +50,7 @@ header {
 
 .full-screenbg {
   font-weight: normal;
-  background-image: url('../img/kawa/bg.png');
+  background-image: url('../images/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -218,7 +218,7 @@ header {
 }
 
 .features-app-section {
-  background-image: url('../img/kawa/coffe1.png') !important;
+  background-image: url('../images/coffe1.png') !important;
   background-repeat: no-repeat;
   margin-top: -10vh;
   .features-service {
@@ -303,7 +303,7 @@ header {
 }
 
 .faq-section {
-  background-image: url('../img/kawa/bg2.png');
+  background-image: url('../images/bg2.png');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -377,7 +377,7 @@ header {
 }
 
 .gallery-section {
-  background-image: url('../img/kawa/bg3.png');
+  background-image: url('../images/bg3.png');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -387,13 +387,13 @@ header {
   padding-bottom: 150px;
   @media (min-width: 2200px) {
     // margin-top: -19vh;
-    background-image: url('../img/kawa/bg3_big.png');
+    background-image: url('../images/bg3_big.png');
     padding-bottom: 230px;
   }
 }
 
 .about-section {
-  background-image: url(../img/kawa/coffe1.png) !important;
+  background-image: url('../images/coffe1.png') !important;
   background-repeat: no-repeat;
   margin-top: -10vh;
   position: relative;
@@ -404,7 +404,7 @@ header {
 }
 
 .google-store-section {
-  background-image: url(../img/kawa/coffe1.png) !important;
+  background-image: url('../images/coffe1.png') !important;
   background-repeat: no-repeat;
   margin-top: -10vh;
   position: relative;
@@ -414,7 +414,7 @@ header {
 }
 
 .contact-section2 {
-  background-image: url('../img/kawa/bg4.png');
+  background-image: url('../images/bg4.png');
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -523,6 +523,10 @@ header {
 .about-section {
   .about-details2 {
     .about-list {
+      padding-left: 4rem;
+      @include media-breakpoint-down(sm) {
+        padding-left: 0;
+      }
       li {
         padding-left: 55px !important;
         margin-bottom: 10px;

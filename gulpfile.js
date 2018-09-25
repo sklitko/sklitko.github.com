@@ -10,7 +10,8 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   autoprefixer = require('gulp-autoprefixer'),
   notify = require('gulp-notify'),
-  rsync = require('gulp-rsync')
+  rsync = require('gulp-rsync'),
+  tinypng = require('gulp-tinypng')
 
 gulp.task('browser-sync', function() {
   browsersync({
@@ -19,7 +20,7 @@ gulp.task('browser-sync', function() {
     },
     notify: false,
     // open: false,
-    tunnel: true,
+    tunnel: false,
     tunnel: 'kawa' //Demonstration page: http://kawa.localtunnel.me
   })
 })
@@ -68,6 +69,13 @@ gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
   gulp.watch('app/' + syntax + '/**/*.' + syntax + '', ['styles'])
   gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js'])
   gulp.watch('app/*.html', browsersync.reload)
+})
+
+gulp.task('tinypng', function() {
+  gulp
+    .src('app/**/*.png')
+    .pipe(tinypng('wGkSUQdaVFB9IChbbPnVYLLSw8GGOJBU'))
+    .pipe(gulp.dest('dist'))
 })
 
 gulp.task('default', ['watch'])
