@@ -155,8 +155,9 @@ var win = $(window)
 // scrollTop init
 $(function() {
   var totop = $('#scrollUp')
+  totop.fadeOut()
   win.on('scroll', function() {
-    if (win.scrollTop() > 150) {
+    if (win.scrollTop() > 200) {
       totop.fadeIn()
     } else {
       totop.fadeOut()
