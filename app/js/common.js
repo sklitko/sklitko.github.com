@@ -186,9 +186,12 @@ $(function() {
 
 $(function() {
   var $menu = $('#my-menu').mmenu({
-    extensions: ['position-right'],
+    extensions: [],
     navbar: { add: false },
-    slidingSubmenus: false
+    slidingSubmenus: false,
+    dividers: {
+      add: false
+    }
   })
   var $icon = $('#my-icon')
   var API = $menu.data('mmenu')

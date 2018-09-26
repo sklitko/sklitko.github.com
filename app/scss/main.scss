@@ -19,6 +19,9 @@ header {
   z-index: 999;
   padding: 20px 0;
   transition: 0.5s;
+  @media (max-width: 361px) {
+    padding: 0;
+  }
 }
 
 .sec-spacer {
@@ -145,6 +148,10 @@ header {
   top: calc(25vh + 125px);
   @include media-breakpoint-down(md) {
     top: calc(25vh + 125px);
+  }
+
+  @media (max-width: 361px) {
+    top: calc(25vh + 85px);
   }
 }
 
