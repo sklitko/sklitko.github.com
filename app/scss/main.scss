@@ -13,10 +13,10 @@ header {
   position: absolute;
   left: 0;
   right: 0;
-  top: 25vh;
+  top: 0;
   width: 100%;
   background: transparent;
-  z-index: 999;
+  z-index: 50;
   padding: 20px 0;
   transition: 0.5s;
   @media (max-width: 361px) {
@@ -66,8 +66,8 @@ header {
   font-weight: normal;
   background-image: url('../images/bg.png');
   @supports (background-image: -webkit-image-set(url('../images/bg.webp') 1x)) {
-      background-image: -webkit-image-set(url('../images/bg.webp') 1x);
-    }
+    background-image: -webkit-image-set(url('../images/bg.webp') 1x);
+  }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -265,9 +265,13 @@ header {
 
 .features-app-section {
   background-image: url('../images/coffee.png') !important;
-  @supports (background-image: -webkit-image-set(url('../images/coffee.webp') 1x)) {
-      background-image: -webkit-image-set(url('../images/coffee.webp') 1x) !important;
-    }
+  @supports (
+    background-image: -webkit-image-set(url('../images/coffee.webp') 1x)
+  ) {
+    background-image: -webkit-image-set(
+      url('../images/coffee.webp') 1x
+    ) !important;
+  }
   background-repeat: no-repeat;
   margin-top: -10vh;
   .features-service {
@@ -353,9 +357,11 @@ header {
 
 .faq-section {
   background-image: url('../images/bg2.png');
-  @supports (background-image: -webkit-image-set(url('../images/bg2.webp') 1x)) {
-      background-image: -webkit-image-set(url('../images/bg2.webp') 1x);
-    }
+  @supports (
+    background-image: -webkit-image-set(url('../images/bg2.webp') 1x)
+  ) {
+    background-image: -webkit-image-set(url('../images/bg2.webp') 1x);
+  }
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -441,9 +447,11 @@ header {
 
 .gallery-section {
   background-image: url('../images/bg3.png');
-  @supports (background-image: -webkit-image-set(url('../images/bg3.webp') 1x)) {
-      background-image: -webkit-image-set(url('../images/bg3.webp') 1x);
-    }
+  @supports (
+    background-image: -webkit-image-set(url('../images/bg3.webp') 1x)
+  ) {
+    background-image: -webkit-image-set(url('../images/bg3.webp') 1x);
+  }
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -454,7 +462,9 @@ header {
   @media (min-width: 2200px) {
     // margin-top: -19vh;
     background-image: url('../images/bg3_big.png');
-  @supports (background-image: -webkit-image-set(url('../images/bg3_big.webp') 1x)) {
+    @supports (
+      background-image: -webkit-image-set(url('../images/bg3_big.webp') 1x)
+    ) {
       background-image: -webkit-image-set(url('../images/bg3_big.webp') 1x);
     }
     padding-bottom: 230px;
@@ -463,9 +473,13 @@ header {
 
 .about-section {
   background-image: url('../images/coffee.png') !important;
-  @supports (background-image: -webkit-image-set(url('../images/coffee.webp') 1x)) {
-      background-image: -webkit-image-set(url('../images/coffee.webp') 1x) !important;
-    }
+  @supports (
+    background-image: -webkit-image-set(url('../images/coffee.webp') 1x)
+  ) {
+    background-image: -webkit-image-set(
+      url('../images/coffee.webp') 1x
+    ) !important;
+  }
   background-repeat: no-repeat;
   margin-top: -10vh;
   position: relative;
@@ -477,9 +491,13 @@ header {
 
 .google-store-section {
   background-image: url('../images/coffee.png') !important;
-  @supports (background-image: -webkit-image-set(url('../images/coffee.webp') 1x)) {
-      background-image: -webkit-image-set(url('../images/coffee.webp') 1x) !important;
-    }
+  @supports (
+    background-image: -webkit-image-set(url('../images/coffee.webp') 1x)
+  ) {
+    background-image: -webkit-image-set(
+      url('../images/coffee.webp') 1x
+    ) !important;
+  }
   background-repeat: no-repeat;
   margin-top: -10vh;
   position: relative;
@@ -490,9 +508,11 @@ header {
 
 .contact-section2 {
   background-image: url('../images/bg4.png');
-  @supports (background-image: -webkit-image-set(url('../images/bg4.webp') 1x)) {
-      background-image: -webkit-image-set(url('../images/bg4.webp') 1x);
-    }
+  @supports (
+    background-image: -webkit-image-set(url('../images/bg4.webp') 1x)
+  ) {
+    background-image: -webkit-image-set(url('../images/bg4.webp') 1x);
+  }
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
@@ -718,6 +738,33 @@ header {
     width: 50px;
     font-size: 35px;
     line-height: 43px;
+  }
+}
+
+.overlay-mobile {
+  cursor: pointer;
+  width: 100%;
+  height: calc(100% - 70px);
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -75%;
+  background: #cecece;
+  width: 75%;
+  height: 100%;
+  transition: 0.4s;
+  z-index: 99;
+  ul li {
+    list-style: none;
+  }
+  &.active {
+    left: 0;
   }
 }
 

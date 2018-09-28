@@ -30,25 +30,25 @@
 		<link rel="stylesheet" href="./libs//magnific-popup.css">
 		<link rel="stylesheet" href="./libs/animate.css">
 		<link rel="stylesheet" href="libs/hamburgers.min.css">
-		<link rel="stylesheet" href="./libs/mmenu/jquery.mmenu.all.css">
+		<!-- <link rel="stylesheet" href="./libs/mmenu/jquery.mmenu.all.css"> -->
 
 
 
 	</head>
 
 	<body>
-
+		<div class="overlay-mobile"></div>
 		<!-- Custom HTML -->
 		<div>
 			<header>
 				<div class="content-container">
 					<div class="row">
 						<div class="col-6 d-sm-none mobilebutton">
-							<button id="my-icon" class="hamburger hamburger--collapse" type="button">
+							<div id="openMenu" class="hamburger hamburger--collapse">
 								<span class="hamburger-box">
 									<span class="hamburger-inner"></span>
 								</span>
-							</button>
+							</div>
 						</div>
 						<div class="col-6 col-md-3">
 							<div class="logo">
@@ -728,7 +728,7 @@
 				<i class="fa fa-angle-up"></i>
 			</div>
 		</div>
-		<nav id="my-menu">
+		<div class="sidebar">
 			<ul>
 				<li><a href="#">Блог</a></li>
 				<li><a href="#">Поддержка</a></li>
@@ -740,7 +740,10 @@
 					</ul>
 				</li>
 			</ul>
-		</nav>
+		</div>
+
+
+
 
 		<script src="libs/modernizr-2.8.3.min.js"></script>
 		<!-- <script src="libs/jquery.min.js"></script> -->
@@ -757,7 +760,7 @@
 		<!-- <script src="libs/waypoints.min.js"></script> -->
 		<script src="libs/jquery.counterup.min.js"></script>
 		<script src="libs/jquery.magnific-popup.min.js"></script>
-		<script src="libs/mmenu/jquery.mmenu.all.js"></script>
+		<!-- <script src="libs/mmenu/jquery.mmenu.all.js"></script> -->
 
 
 
