@@ -189,8 +189,8 @@ $(function() {
     extensions: [],
     navbar: { add: false },
     slidingSubmenus: false,
-    dividers: {
-      add: false
+    classNames: {
+      vertical: 'expand'
     }
   })
   var $icon = $('#my-icon')
