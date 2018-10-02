@@ -41,7 +41,7 @@ if (!navigator.cookieEnabled || lg == 1) {
   oLanguage.UALanguage == 'ru-RU'
 ) {
   document.cookie = 'lg=1'
-  location.href = '/app'
+  location.href = 'app/index.html'
 } else {
   document.cookie = 'lg=1'
   location.href = 'app/index.en.html'
