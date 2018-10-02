@@ -731,6 +731,7 @@ header {
 }
 
 #scrollUp {
+  bottom: 100px;
   i {
     background: linear-gradient(135deg, #ff6d00, #ffb74d);
     box-shadow: 0px 12px 26px 0px rgba(0, 0, 0, 0.3);
@@ -738,6 +739,9 @@ header {
     width: 50px;
     font-size: 35px;
     line-height: 43px;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none !important;
   }
 }
 
@@ -755,16 +759,48 @@ header {
   position: fixed;
   top: 0;
   left: -75%;
-  background: #cecece;
+  background: #f8f8f8;
   width: 75%;
   height: 100%;
   transition: 0.4s;
   z-index: 99;
-  ul li {
+  &__header {
+    height: 200px;
+    background-image: url('../images/fresh-roasted-coffee-beans-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  &__list {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  &__item {
     list-style: none;
+    padding: 10px 0;
+    color: #4c4a3e;
+    font-weight: 400;
+    ul {
+      padding-top: 10px;
+    }
+    ul li {
+      padding: 5px 0px 5px 60px;
+      font-size: 16px;
+    }
   }
   &.active {
     left: 0;
+  }
+  &__link,
+  a {
+    color: #4c4a3e;
+    display: flex;
+  }
+
+  [class^='icon2-'],
+  [class*=' icon2-'] {
+    height: 25px;
+    width: 50px;
   }
 }
 

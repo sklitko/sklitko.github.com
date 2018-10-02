@@ -145,27 +145,6 @@
   color: #f8f8f8;
 }
 
-// .icon-ru:hover {
-//   &::before {
-//     background-color: rgb(233, 148, 35);
-//     border-radius: 50%;
-//   }
-// }
-
-// .icon-ua:hover {
-//   &::before {
-//     background-color: rgb(233, 148, 35);
-//     border-radius: 50%;
-//   }
-// }
-
-// .icon-en:hover {
-//   &::before {
-//     background-color: rgb(233, 148, 35);
-//     border-radius: 50%;
-//   }
-// }
-
 .icon-ru2 .path1:before {
   content: '\e91c';
   color: rgb(233, 148, 35);
@@ -264,5 +243,26 @@
   background-image: url('../images/icons/en.png');
   &:hover {
     background-image: url('../images/icons/en2.png');
+  }
+}
+
+.icon2-lang {
+  background-image: url('../images/icons/lang.png');
+  &:hover {
+    background-image: url('../images/icons/lang2.png');
+  }
+}
+
+.icon2-blog {
+  background-image: url('../images/icons/blog.png');
+  &:hover {
+    background-image: url('../images/icons/blog.png');
+  }
+}
+
+.icon2-support {
+  background-image: url('../images/icons/support.png');
+  &:hover {
+    background-image: url('../images/icons/support2.png');
   }
 }
