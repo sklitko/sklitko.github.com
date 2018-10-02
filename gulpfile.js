@@ -21,7 +21,7 @@ gulp.task('browser-sync', function() {
     },
     notify: false,
     // open: false,
-    tunnel: false,
+    tunnel: false
     // tunnel: 'kawa' //Demonstration page: http://kawa.localtunnel.me
   })
 })
@@ -41,6 +41,7 @@ gulp.task('js', function() {
   return (
     gulp
       .src([
+        'app/js/language.js',
         'app/js/common.js' // Always at the end
       ])
       .pipe(concat('scripts.min.js'))
@@ -68,7 +69,7 @@ gulp.task('rsync', function() {
 
 gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
   gulp.watch('app/' + syntax + '/**/*.' + syntax + '', ['styles'])
-  gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js'])
+  gulp.watch(['libs/**/*.js', 'app/js/language.js', 'app/js/common.js'], ['js'])
   gulp.watch('app/*.html', browsersync.reload)
 })
 
