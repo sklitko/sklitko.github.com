@@ -806,18 +806,4 @@ header {
   }
 }
 
-#preloadedImages {
-  width: 0px;
-  height: 0px;
-  display: inline;
-  background-image: url('../images/icons/ru2.png');
-  background-image: url('../images/icons/ua2.png');
-  background-image: url('../images/icons/en2.png');
-  background-image: url('../images/icons/insta2.png');
-  background-image: url('../images/icons/fb2.png');
-  background-image: url('../images/icons/g+2.png');
-  background-image: url('../images/icons/tw2.png');
-  background-image: url();
-}
-
 @import 'media'; // Always at the end
