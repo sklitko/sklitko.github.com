@@ -145,11 +145,11 @@ $(function() {
     })
 })
 
-$(function() {
-  $('.features-service').hover(function() {
-    $('#featureImage').attr('src', $(this).data('img'))
-  })
-})
+// $(function() {
+//   $('.features-service').hover(function() {
+//     $('#featureImage').attr('src', $(this).data('img'))
+//   })
+// })
 
 var win = $(window)
 // scrollTop init
@@ -182,6 +182,7 @@ $(function() {
   //preload images
   $('.features-service').each(function() {
     preloadImages($(this).data('img'))
+    preloadImages($(this).data('img-webp'))
   })
 
   //mobile menu
@@ -195,5 +196,20 @@ $(function() {
     $('.sidebar').toggleClass('active')
     $('.overlay-mobile').hide()
     $('#openMenu').removeClass('is-active')
+  })
+})
+
+$(function() {
+  Modernizr.on('webp', function(result) {
+    console.log(result)
+    if (result) {
+      $('.features-service').hover(function() {
+        $('#featureImageWebp').attr('srcset', $(this).data('img-webp'))
+      })
+    } else {
+      $('.features-service').hover(function() {
+        $('#featureImage').attr('src', $(this).data('img'))
+      })
+    }
   })
 })

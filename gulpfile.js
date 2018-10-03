@@ -12,7 +12,8 @@ var gulp = require('gulp'),
   notify = require('gulp-notify'),
   rsync = require('gulp-rsync'),
   tinypng = require('gulp-tinypng'),
-  del = require('del')
+  del = require('del'),
+  webp = require('gulp-webp')
 
 gulp.task('browser-sync', function() {
   browsersync({
@@ -38,17 +39,15 @@ gulp.task('styles', function() {
 })
 
 gulp.task('js', function() {
-  return (
-    gulp
-      .src([
-        'app/js/language.js',
-        'app/js/common.js' // Always at the end
-      ])
-      .pipe(concat('scripts.min.js'))
-      // .pipe(uglify()) // Mifify js (opt.)
-      .pipe(gulp.dest('app/js'))
-      .pipe(browsersync.reload({ stream: true }))
-  )
+  return gulp
+    .src([
+      'app/js/language.js',
+      'app/js/common.js' // Always at the end
+    ])
+    .pipe(concat('scripts.min.js'))
+    .pipe(uglify()) // Mifify js (opt.)
+    .pipe(gulp.dest('app/js'))
+    .pipe(browsersync.reload({ stream: true }))
 })
 
 gulp.task('rsync', function() {
@@ -80,6 +79,10 @@ gulp.task('tinypng', function() {
     .pipe(gulp.dest('dist_img'))
 })
 
+gulp.task('webp', function() {
+  gulp.src('app/**/*.webp').pipe(gulp.dest('dist'))
+})
+
 gulp.task('default', ['watch'])
 
 gulp.task('build', ['removedist', 'styles', 'js'], function() {
@@ -98,3 +101,10 @@ gulp.task('build', ['removedist', 'styles', 'js'], function() {
 gulp.task('removedist', function() {
   return del.sync('dist')
 })
+
+gulp.task('webpp', () =>
+  gulp
+    .src('app/**/*.png')
+    .pipe(webp())
+    .pipe(gulp.dest('dist'))
+)

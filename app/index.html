@@ -237,7 +237,7 @@
 					</div>
 					<div class="row">
 						<div class="col-lg-4 col-md-12">
-							<div class="features-service text-right" data-img="./images/2/catalog.png">
+							<div class="features-service text-right" data-img="./images/2/catalog.png" data-img-webp="./images/2/catalog.webp">
 								<div class="features-icon">
 									<img src="./images/icons/cart.png" alt="" srcset="" class="img-fluid">
 								</div>
@@ -246,7 +246,7 @@
 									<p>Продажа кофе на любой вкус. Легкий поиск, лучшая цена, рейтинг кофе, отзывы покупателей, удобная оплата.</p>
 								</div>
 							</div>
-							<div class="features-service text-right" data-img="./images/2/my_addition_coffee_scan.png">
+							<div class="features-service text-right" data-img="./images/2/my_addition_coffee_scan.png" data-img-webp="./images/2/my_addition_coffee_scan.webp">
 								<div class="features-icon">
 									<img src="./images/icons/barcode.png" alt="" srcset="" class="img-fluid">
 								</div>
@@ -255,7 +255,7 @@
 									<p>Сканируйте штрих-код и узнайте все о продукте. Отзывы покупателей помогут определить Ваш выбор.</p>
 								</div>
 							</div>
-							<div class="features-service text-right" data-img="./images/2/my-coffee.png">
+							<div class="features-service text-right" data-img="./images/2/my-coffee.png" data-img-webp="./images/2/my-coffee.webp">
 								<div class="features-icon">
 									<img src="./images/icons/coffee-beans.png" alt="" srcset="" class="img-fluid">
 								</div>
@@ -267,10 +267,13 @@
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-12 text-center feture-mid-images">
-							<img src="images/2/catalog.png" alt="" id="featureImage">
+							<picture>
+								<source srcset="./images/2/catalog.webp" type="image/webp" id="featureImageWebp">
+								<img src="images/2/catalog.png" alt="" id="featureImage">
+							</picture>
 						</div>
 						<div class="col-lg-4 col-md-12">
-							<div class="features-service text-left" data-img="./images/2/recipes_catalog.png">
+							<div class="features-service text-left" data-img="./images/2/recipes_catalog.png" data-img-webp="./images/2/recipes_catalog.webp">
 								<div class="features-icon">
 									<img src="./images/icons/menu.png" alt="" srcset="" class="img-fluid">
 								</div>
@@ -279,7 +282,7 @@
 									<p>Каталог рецептов приготовления кофе из разных стран мира. Холодный, горячий кофе, кофе с алкоголем.</p>
 								</div>
 							</div>
-							<div class="features-service text-left" data-img="./images/2/recipes_search_milk-1.png">
+							<div class="features-service text-left" data-img="./images/2/recipes_search_milk-1.png" data-img-webp="./images/2/recipes_search_milk-1.webp">
 								<div class="features-icon">
 									<img src="./images/icons/search.png" alt="" srcset="" class="img-fluid">
 								</div>
@@ -290,7 +293,7 @@
 										выбором.</p>
 								</div>
 							</div>
-							<div class="features-service text-left" data-img="./images/2/divination.png">
+							<div class="features-service text-left" data-img="./images/2/divination.png" data-img-webp="./images/2/divination.webp">
 								<div class="features-icon">
 									<img src="./images/icons/cup.png" alt="" srcset="" class="img-fluid">
 								</div>
@@ -772,6 +775,7 @@
 
 
 		<script src="libs/modernizr-2.8.3.min.js"></script>
+		<script src="libs/modernizr-custom.js"></script>
 		<!-- <script src="libs/jquery.min.js"></script> -->
 		<script src="libs/jquery/dist/jquery.min.js"></script>
 		<!-- <script src="libs/bootstrap/bootstrap.min.js"></script> -->
@@ -786,7 +790,6 @@
 		<!-- <script src="libs/waypoints.min.js"></script> -->
 		<script src="libs/jquery.counterup.min.js"></script>
 		<script src="libs/jquery.magnific-popup.min.js"></script>
-		<!-- <script src="libs/mmenu/jquery.mmenu.all.js"></script> -->
 
 
 
