@@ -84,6 +84,7 @@ header {
       }
       a {
         position: relative;
+        display: flex;
         &:hover {
           & > span {
             display: block;
@@ -92,7 +93,8 @@ header {
         & > span {
           position: absolute;
           left: 43px;
-          top: -30px;
+          // top: -30px;
+          top: 3px;
           color: #ffffff;
           display: none;
         }
