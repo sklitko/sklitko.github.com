@@ -192,61 +192,32 @@
 [class^='icon2-'],
 [class*=' icon2-'] {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: block;
-  height: 35px;
-  width: 35px;
+  height: 35px !important;
+  width: 35px !important;
+  background-position: 0px 0;
+  &:hover {
+    background-position: -35px 0;
+  }
 }
 .icon2-fb {
   background-image: url('../images/icons/fb.png');
-  &::before {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    background-image: url('../images/icons/fb2.png');
-  }
-  &:hover {
-    background-image: url('../images/icons/fb2.png');
-  }
 }
 
 .icon2-tw {
   background-image: url('../images/icons/tw.png');
-  &::before {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    background-image: url('../images/icons/tw2.png');
-  }
-  &:hover {
-    background-image: url('../images/icons/tw2.png');
-  }
 }
 
 .icon2-g {
   background-image: url('../images/icons/g+.png');
-  &::before {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    background-image: url('../images/icons/g+2.png');
-  }
-  &:hover {
-    background-image: url('../images/icons/g+2.png');
-  }
 }
 
+.icon2-yt {
+  background-image: url('../images/icons/yt.png');
+}
 .icon2-insta {
-  background-image: url('../images/icons/insta.png');
-  &::before {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    background-image: url('../images/icons/insta2.png');
-  }
-  &:hover {
-    background-image: url('../images/icons/insta2.png');
-  }
+  background-image: url('../images/icons/ig.png');
 }
 
 .icon2-ru {
