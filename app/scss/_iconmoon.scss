@@ -222,41 +222,14 @@
 
 .icon2-ru {
   background-image: url('../images/icons/ru.png');
-  &::before {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    background-image: url('../images/icons/ru2.png');
-  }
-  &:hover {
-    background-image: url('../images/icons/ru2.png');
-  }
 }
 
 .icon2-ua {
   background-image: url('../images/icons/ua.png');
-  &::before {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    background-image: url('../images/icons/ua2.png');
-  }
-  &:hover {
-    background-image: url('../images/icons/ua2.png');
-  }
 }
 
 .icon2-en {
   background-image: url('../images/icons/en.png');
-  &::before {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-    background-image: url('../images/icons/en2.png');
-  }
-  &:hover {
-    background-image: url('../images/icons/en2.png');
-  }
 }
 
 .icon2-lang {
