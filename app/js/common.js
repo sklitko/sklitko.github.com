@@ -218,3 +218,16 @@ $(function() {
     }
   })
 })
+
+$(function() {
+  // Bind the swipeleftHandler callback function to the swipe event on div.box
+  $('.sidebar, .overlay-mobile').on('swipeleft', swipeleftHandler)
+
+  // Callback function references the event target and adds the 'swipeleft' class to it
+  function swipeleftHandler(e) {
+    e.preventDefault()
+    $('.sidebar').toggleClass('active')
+    $('.overlay-mobile').hide()
+    $('#openMenu').removeClass('is-active')
+  }
+})
