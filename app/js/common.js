@@ -180,10 +180,10 @@ function preloadImages() {
 
 $(function() {
   //preload images
-  $('.features-service').each(function() {
-    preloadImages($(this).data('img'))
-    preloadImages($(this).data('img-webp'))
-  })
+  // $('.features-service').each(function() {
+  //   preloadImages($(this).data('img'))
+  //   preloadImages($(this).data('img-webp'))
+  // })
 
   //mobile menu
   $('#openMenu').click(function() {
@@ -201,12 +201,17 @@ $(function() {
 
 $(function() {
   Modernizr.on('webp', function(result) {
-    console.log(result)
     if (result) {
+      $('.features-service').each(function() {
+        preloadImages($(this).data('img-webp'))
+      })
       $('.features-service').hover(function() {
         $('#featureImageWebp').attr('srcset', $(this).data('img-webp'))
       })
     } else {
+      $('.features-service').each(function() {
+        preloadImages($(this).data('img'))
+      })
       $('.features-service').hover(function() {
         $('#featureImage').attr('src', $(this).data('img'))
       })
