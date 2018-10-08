@@ -419,7 +419,7 @@ header {
     background-color: $main;
     border-radius: 10px;
     border-bottom: none;
-    padding: 12px 20px;
+    padding: 8px 20px 12px 20px;
     @include media-breakpoint-down(sm) {
       border-radius: 7px;
       padding: 10px 15px;
@@ -435,7 +435,10 @@ header {
       &:focus {
         text-decoration: none;
       }
+      position: relative;
       &::after {
+        position: absolute;
+        right: 0;
         content: '\f054';
         font-family: 'FontAwesome';
         color: #ffffff;
