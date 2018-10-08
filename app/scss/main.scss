@@ -364,6 +364,11 @@ header {
   ) {
     background-image: -webkit-image-set(url('../images/bg2.webp') 1x);
   }
+
+  @include media-breakpoint-down(md) {
+    background-image: url('../images/bg2_mobile.png');
+  }
+
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
