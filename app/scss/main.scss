@@ -223,8 +223,27 @@ header {
   background: #573402 !important;
 }
 
-.contact-section .footer-bottom.footer-bottom2 {
-  padding-top: 0;
+.contact-section {
+  .footer-bottom.footer-bottom2 {
+    padding-top: 0;
+    @include media-breakpoint-down(sm) {
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+  .footer-bottom.copy-right-inner {
+    @include media-breakpoint-down(sm) {
+      padding-top: 15px;
+    }
+  }
+  .footer-bottom {
+    .social-icons ul {
+      @include media-breakpoint-down(sm) {
+        padding-top: 10px;
+      }
+    }
+  }
 }
 
 .rs-count {
