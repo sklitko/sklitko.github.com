@@ -32,7 +32,7 @@ header {
   margin-top: 10px;
   img {
     height: auto;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
       height: 65px;
     }
   }
