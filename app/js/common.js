@@ -222,6 +222,7 @@ $(function() {
 $(function() {
   // Bind the swipeleftHandler callback function to the swipe event on div.box
   $('.sidebar, .overlay-mobile').on('swipeleft', swipeleftHandler)
+  $(document).on('swiperight', swiperightHandler)
 
   // Callback function references the event target and adds the 'swipeleft' class to it
   function swipeleftHandler(e) {
@@ -229,5 +230,11 @@ $(function() {
     $('.sidebar').toggleClass('active')
     $('.overlay-mobile').hide()
     $('#openMenu').removeClass('is-active')
+  }
+
+  function swiperightHandler(e) {
+    $('.sidebar').toggleClass('active')
+    $('#openMenu').addClass('is-active')
+    $('.overlay-mobile').show()
   }
 })
