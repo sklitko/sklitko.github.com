@@ -200,6 +200,10 @@ $(function() {
 })
 
 $(function() {
+  $('.lazy').lazy()
+})
+
+$(function() {
   Modernizr.on('webp', function(result) {
     if (result) {
       $('.features-service').each(function() {

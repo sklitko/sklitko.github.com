@@ -1,4 +1,5 @@
 /node_modules/
 /kawa/
 /dist/
+/dist_img/
 .gulp

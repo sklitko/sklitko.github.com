@@ -64,7 +64,7 @@ header {
 
 .full-screenbg {
   font-weight: normal;
-  background-image: url('../images/bg.png');
+  background-image: url('../images/bg_lazy.png');
   @supports (background-image: -webkit-image-set(url('../images/bg.webp') 1x)) {
     background-image: -webkit-image-set(url('../images/bg.webp') 1x);
   }
