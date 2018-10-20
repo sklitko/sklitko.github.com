@@ -79,7 +79,7 @@ header {
     &-desktop {
       position: absolute;
       bottom: 0;
-      li {
+      li:not(:first-child) {
         margin-top: 15px;
       }
       a {
