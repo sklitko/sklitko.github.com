@@ -44,7 +44,8 @@ $(function() {
         0: {
           items: xsDevice ? xsDevice : 1,
           nav: xsDeviceNav ? true : false,
-          dots: xsDeviceDots ? true : false
+          dots: xsDeviceDots ? true : false,
+          autoplay: false
         },
         768: {
           items: smDevice ? smDevice : 3,
@@ -75,9 +76,25 @@ $(function() {
           )
         }
       },
+      disableOn: function() {
+        if ($(window).width() < 768) {
+          popupquote.click(function(e) {
+            e.preventDefault()
+          })
+          return false
+        }
+        return true
+      },
+      // disableOn: 700,
       gallery: {
         enabled: true
       }
+    })
+  }
+
+  if ($(window).width() < 768) {
+    popupquote.click(function(e) {
+      e.preventDefault()
     })
   }
 
@@ -227,7 +244,7 @@ $(function() {
   // Bind the swipeleftHandler callback function to the swipe event on div.box
   $('.sidebar, .overlay-mobile').on('swipeleft', swipeleftHandler)
 
-  $(document).on('swiperight', swiperightHandler)
+  $('body').on('swiperight', swiperightHandler)
 
   // Callback function references the event target and adds the 'swipeleft' class to it
   function swipeleftHandler(e) {
@@ -238,7 +255,11 @@ $(function() {
   }
 
   function swiperightHandler(e) {
-    if ($(window).width() < 768) {
+    e.preventDefault()
+    if (
+      $(window).width() < 768 &&
+      !$(e.target).parents('#gallery-section').length
+    ) {
       $('.sidebar').toggleClass('active')
       $('#openMenu').addClass('is-active')
       $('.overlay-mobile').show()
